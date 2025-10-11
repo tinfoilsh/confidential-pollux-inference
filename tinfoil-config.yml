@@ -43,6 +43,8 @@ shim:
   tls-challenge: dns
   paths:
     - /v1/chat/completions
-    - /metrics
     - /ping
     - /v1/loaded_model
+    - /v1/metrics/vllm/full
+    - /v1/metrics/short
+    - /v1/downloaded_models
