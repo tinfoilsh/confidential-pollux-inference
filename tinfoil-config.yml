@@ -31,7 +31,7 @@ containers:
       "-e", "GCS_BUCKET=pollux-tinfoil",
       "-e", "POLLUX_LN_GCS_BUCKET=gs://pollux-tinfoil",
       "-e", "POLLUX_GCSFUSE_MOUNT_PATH=/mnt/gcs",
-      "us-central1-docker.pkg.dev/workshop-labs-pbc/pollux-docker/ml-inference:27ac778",
+      "us-central1-docker.pkg.dev/workshop-labs-pbc/pollux-docker/ml-inference:2310898",
       "-m", "scripts.inference_server",
       "unsloth-hermes4-70b"
     ]
