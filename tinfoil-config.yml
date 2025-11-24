@@ -1,4 +1,4 @@
-shim-version: v0.2.10@sha256:f9040a48106ab06c290fd9b225d4dd53a2daad715c9107594d4310b21592039f
+shim-version: v0.2.11@sha256:cbbbeeac855948610cd1ba5b406d10ffa13331cbbe7d25964ba3c90486f65810
 cvm-version: 0.5.7
 cpus: 16
 memory: 262144
@@ -14,7 +14,7 @@ containers:
       "--security-opt", "apparmor=unconfined",
       "-v", "/mnt/ramdisk/gcs-bucket:/gcs:rshared",
       "-v", "/mnt/ramdisk/gcloud_key.json:/key.json:ro",
-      "-e", "BUCKET_NAME=pollux-tinfoil",
+      "-e", "BUCKET_NAME=pollux-enc-prod",
       "kapetacom/gcsfuse-ubuntu:v3.2.0"
     ]
 
@@ -29,10 +29,10 @@ containers:
       "-v", "/mnt/ramdisk/gcs-bucket:/mnt/gcs:ro",
       "-v", "/mnt/ramdisk/gcloud_key.json:/key.json:ro",
       "-e", "GOOGLE_APPLICATION_CREDENTIALS=/key.json",
-      "-e", "GCS_BUCKET=pollux-tinfoil",
-      "-e", "POLLUX_LN_GCS_BUCKET=gs://pollux-tinfoil",
+      "-e", "GCS_BUCKET=pollux-enc-prod",
+      "-e", "POLLUX_LN_GCS_BUCKET=gs://pollux-enc-prod",
       "-e", "POLLUX_GCSFUSE_MOUNT_PATH=/mnt/gcs",
-      "us-central1-docker.pkg.dev/workshop-labs-pbc/pollux-docker/ml-inference:afd8afc",
+      "us-central1-docker.pkg.dev/workshop-labs-pbc/pollux-docker/ml-inference@sha256:cee6dbc910529b78c44766f719a1b718a7b225838c1f42942c0027353f7f7b26",
       "-m", "scripts.inference_server",
       "unsloth-hermes4-70b"
     ]
