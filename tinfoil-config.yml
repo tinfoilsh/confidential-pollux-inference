@@ -1,9 +1,8 @@
-shim-version: v0.2.11@sha256:cbbbeeac855948610cd1ba5b406d10ffa13331cbbe7d25964ba3c90486f65810
-cvm-version: 0.5.7
+shim-version: v0.2.14@sha256:24d59ce41ad00a05ab5a37708b0d8b07a7d09abb1b74b75ee4862f688d093949
+cvm-version: 0.5.8
 cpus: 16
 memory: 262144
 gpus: full
-vllm: false
 
 containers:
   - name: "gcsfuse"
@@ -32,7 +31,7 @@ containers:
       "-e", "GCS_BUCKET=pollux-enc-prod",
       "-e", "POLLUX_LN_GCS_BUCKET=gs://pollux-enc-prod",
       "-e", "POLLUX_GCSFUSE_MOUNT_PATH=/mnt/gcs",
-      "us-central1-docker.pkg.dev/workshop-labs-pbc/pollux-docker/ml-inference@sha256:cee6dbc910529b78c44766f719a1b718a7b225838c1f42942c0027353f7f7b26",
+      "us-central1-docker.pkg.dev/workshop-labs-pbc/pollux-docker/ml-inference@sha256:53c67f70c846d891a38b20d924534c1a378c418a2144c19a96f83cefeae1471f",
       "-m", "scripts.inference_server",
       "unsloth-hermes4-70b"
     ]
@@ -40,7 +39,7 @@ containers:
 shim:
   listen-port: 443
   upstream-port: 8000
-  publish-attestation: false
+  publish-attestation: true
   tls-challenge: dns
   paths:
     - /v1/chat/completions
