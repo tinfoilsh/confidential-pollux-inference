@@ -1,5 +1,5 @@
-shim-version: v0.2.14@sha256:24d59ce41ad00a05ab5a37708b0d8b07a7d09abb1b74b75ee4862f688d093949
-cvm-version: 0.5.8
+shim-version: v0.2.15@sha256:5ca748b384b78b7e686b57ca66d9b3c552038ebab2ce60305004f76e573a8458
+cvm-version: 0.5.9
 cpus: 16
 memory: 262144
 gpus: full
@@ -32,7 +32,7 @@ containers:
       "-e", "POLLUX_LN_GCS_BUCKET=gs://pollux-enc-prod",
       "-e", "POLLUX_GCSFUSE_MOUNT_PATH=/mnt/gcs",
       "-e", "KEY_MODE=real_keys",
-      "us-central1-docker.pkg.dev/workshop-labs-pbc/pollux-docker/ml-inference@sha256:53c67f70c846d891a38b20d924534c1a378c418a2144c19a96f83cefeae1471f",
+      "us-central1-docker.pkg.dev/workshop-labs-pbc/pollux-docker/ml-inference@sha256:1d8b6772dbbb44110ee737040d200b711ddab763b9fe028e8caf7c3230a9e083",
       "-m", "scripts.inference_server",
       "unsloth-hermes4-70b"
     ]
