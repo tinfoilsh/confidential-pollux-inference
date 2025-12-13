@@ -32,7 +32,7 @@ containers:
       "-e", "POLLUX_LN_GCS_BUCKET=gs://pollux-enc-prod",
       "-e", "POLLUX_GCSFUSE_MOUNT_PATH=/mnt/gcs",
       "-e", "KEY_MODE=real_keys",
-      "us-central1-docker.pkg.dev/workshop-labs-pbc/pollux-docker/ml-inference@sha256:1d8b6772dbbb44110ee737040d200b711ddab763b9fe028e8caf7c3230a9e083",
+      "us-central1-docker.pkg.dev/workshop-labs-pbc/pollux-docker/ml-inference@sha256:e74df627f8e2ea3f5eeb530a8af2afa0986626ba82a9f219690f06f59a9160b2",
       "-m", "scripts.inference_server",
       "unsloth-hermes4-70b"
     ]
