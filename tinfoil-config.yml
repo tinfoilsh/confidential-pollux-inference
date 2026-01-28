@@ -50,4 +50,4 @@ shim:
     - /v1/metrics/short
     - /v1/downloaded_models
     - /v1/downloaded_models_reset
-    - /v1/user/{user_id}
+    - /v1/user/*
